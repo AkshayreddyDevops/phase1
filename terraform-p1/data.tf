@@ -13,5 +13,5 @@ data "aws_security_groups" "resource-ext1" {
 }
 
 output "ami"{
-  value = data.aws_ami.resource-ext1.image_id
+  value = data.aws_ami.resource-ext1
 }

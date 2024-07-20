@@ -1,3 +1,3 @@
 variable "aim" {
-  default = output.ami
+  default = ami.image_id
 }
