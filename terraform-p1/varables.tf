@@ -1,3 +1,3 @@
 variable "aim" {
-  default = data.aim
+  default = "data.aim"
 }
