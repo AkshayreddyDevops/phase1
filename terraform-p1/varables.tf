@@ -1,3 +1,3 @@
 variable "var_ami" {
-  default = data.aws_ami.resource-ex1
+  default = ami-041e2ea9402c46c32
 }
