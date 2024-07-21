@@ -21,7 +21,7 @@ resource "null_resource" "provisioner" {
 
   inline = [
     "pip-3.11 install ansible",
-    "ansible-pull -i localhost, -U https://github.com/AkshayreddyDevops/Devops deploy_components.yml -e role=frontend"
+    "ansible-pull -i localhost, -U https://github.com/AkshayreddyDevops/Devops deploy_components.yml -e role=frontend -e ip=localhost"
   ]
  }
 }
