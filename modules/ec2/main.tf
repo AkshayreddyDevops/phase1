@@ -11,7 +11,7 @@ output "private_ip" {
   value = aws_instance.test.private_ip
 }
 
-provider "remote_exe" {
+provider "remote_exec" {
   connection{
     user = "ec2-user"
     password = "DevOps321"
