@@ -12,7 +12,7 @@ output "private_ip" {
 }
 
 resource "null_resource" "provisioner" {
-  depends_on = [aws_route53_record.dns_record]
+  depends_on = [module.dns.dns_record]
    provisioner "remote-exec" {
   connection{
     user = "ec2-user"
