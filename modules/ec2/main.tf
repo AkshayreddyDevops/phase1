@@ -12,7 +12,7 @@ output "private_ip" {
 }
 
 resource "null_resource" "provisioner" {
-   provisioner "remote_exec" {
+   provisioner "remote-exec" {
   connection{
     user = "ec2-user"
     password = "DevOps321"
