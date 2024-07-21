@@ -1,4 +1,11 @@
-variable "var_ami" {
-  # default = "ami-041e2ea9402c46c32"
-  default = "${locals.default_ami}"
+variable "instance_name" {
+  default = {
+    frontend:{
+      inst_type = "t3_micro"
+    }
+    mongo:{
+      inst_type="t3_micro"
+    }
+  }
+  
 }
