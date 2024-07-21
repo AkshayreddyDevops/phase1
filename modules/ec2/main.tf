@@ -10,3 +10,16 @@ resource "aws_instance" "test"{
 output "private_ip" {
   value = aws_instance.test.private_ip
 }
+
+provider "remote_exe" {
+  connection{
+    user = "ec2-user"
+    password = "DevOps321"
+    host = aws_instance.test.private_ip
+  }
+
+  inline = [
+    "pip-3.11 install ansible",
+    "ansible-pull -i localhost, -U https://github.com/AkshayreddyDevops/Devops deploy_components.yml -e role=frontend"
+  ]
+}
