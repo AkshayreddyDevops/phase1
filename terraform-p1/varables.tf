@@ -1,10 +1,12 @@
 variable "instance_name" {
   default = {
     frontend:{
-      inst_type = "t3_micro"
+      type1 = "t3.micro"
+      type2 = "t3.small"
     }
     mongo:{
-      inst_type="t3_micro"
+      type1 = "t3_micro"
+      type2 = "t3.small"
     }
   }
   
