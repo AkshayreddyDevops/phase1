@@ -5,3 +5,7 @@ resource "aws_route53_record" "dns_record" {
   ttl = 30
   records = [var.private_ip]
 }
+
+output "check_dependence" {
+  value = aws_route53_record.dns_record.name
+}
