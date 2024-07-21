@@ -14,7 +14,7 @@ resource "aws_route53_record" "dns_record" {
   name = "${each.key}.edutech.online"
   type ="A"
   ttl = 30
-  records = [data.aws_ami.resource-ext1["each.key"].private_ip]
+  records = [aws_instance.ec2[each.key].private_ip]
 }
 
 
