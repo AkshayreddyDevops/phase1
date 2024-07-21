@@ -12,6 +12,6 @@ data "aws_security_groups" "resource-ext1" {
   }
 }
 
-locals {
-  ami = data.aws_ami.resource-ext1
+data "aws_route53_zone" "name" {
+  name         = "edutech.online"
 }
